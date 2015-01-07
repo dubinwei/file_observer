@@ -18,8 +18,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startService(new Intent(this, FileObserverService.class));
 //        File latest = FileObserverService.getLatestFile(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Download/");
-        Log.i("baadoo", "latest:"+getApkName(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Download/"+"kao.apk"));
+//        Log.i("baadoo", "latest:"+getApkName(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Download/"+"kao.apk"));
     }
 
     public String getApkName(String filePath) {
